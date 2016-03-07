@@ -19,7 +19,7 @@ function fetchImages(instagramPosts, callback) {
         var urlEnd = body.indexOf('?', urlStart + needle.length)
         instagramImages[index] = body.substring(urlStart+needle.length, urlEnd)
         counter++
-        if (require.main === module) console.log(timeEnd-timeStart)
+        if (require.main === module) console.log('Request with index ' + index + ' took', timeEnd-timeStart, 'ms')
         if (counter == numberOfPosts) return callback(null, instagramImages)
       })
     }).on('error', function(error){
@@ -33,7 +33,8 @@ if (require.main === module) {
   var totalTimeStart = Date.now()
   fetchImages(instagramPosts, function(error, instagramImages){
     var totalTimeEnd = Date.now()
-    console.log(instagramImages, totalTimeEnd- totalTimeStart)
+    console.log(instagramImages)
+    console.log('Total time: ', totalTimeEnd- totalTimeStart, 'ms')
   })
 }
 else {
