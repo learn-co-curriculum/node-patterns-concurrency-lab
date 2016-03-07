@@ -1,0 +1,14 @@
+tags:
+  - lab
+  - node
+languages:
+  - node
+resources: 0
+track:
+  - web development
+topc:
+  - node
+unit:
+  - Patterns for Managing Async Code
+lesson:
+  - Async Lab
