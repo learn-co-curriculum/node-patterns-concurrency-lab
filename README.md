@@ -22,7 +22,7 @@ In this lab, you'll implement asynchronous loop without any extra libraries to m
 1. Export the function if this script is imported or invoke the function if it runs in standalone mode (look in extra info).
 1. For standalone mode print all URL of images (not posts) in the original order.
 1. For module mode, make sure the callback(step 4) has arguments error and URLs.
-1. Bonus: For standalone mode, output number of millisecond each request took.
+1. Bonus: For standalone mode, output number of millisecond each request took and number of milliseconds for the entire script from start to finish. The total time shouldn't be much higher than the highest individual time. That's how you know that the requests were running concurrently, not sequentially. 
  
 ### Extra Info
 
