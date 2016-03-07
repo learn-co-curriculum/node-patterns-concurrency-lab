@@ -1,26 +1,18 @@
 var expect = require('chai').expect,
-  cp = require('child_process')
+  path = require('path'),
+  requert = require(path.join('..', 'request.js'))
+  instagramPosts = require(path.join('..', 'posts.js'))
 
+var results = [ 'https://scontent-lhr3-1.cdninstagram.com/t51.2885-15/e35/12328439_897878643643183_1624097390_n.jpg',
+  'https://scontent-lhr3-1.cdninstagram.com/t51.2885-15/e35/12716898_1724110531198769_672525303_n.jpg' ]
 
-describe('node version', function () {
-  it('must be 5.1', function(done){
-    expect(process.versions.node).to.equal('5.1.0')
-    done()
-  })
-
-})
-
-describe('npm version', function () {
-  it('must be 2.14.15 or greater', function(done){
-    child = cp.exec('npm -v',
-    function (error, stdout, stderr) {
-      expect(stderr).to.equal('')
-      if (error !== null) {
-        console.log('exec error: ' + error)
-      }
-      stdout = stdout.replace('\n','')
-      // expect(semver.satisfies(stdout, '>=2.14.15')).to.equal(true)
+describe('request.js', function () {
+  it('must return URLs for images', function(done){
+    request(instagramPosts, function(error, instagramImages) {
+      expect(error).to.be.null
+      expect(instagramImages).to.equal(results)
       done()
     })
   })
+
 })
