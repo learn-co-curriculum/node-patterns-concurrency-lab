@@ -17,7 +17,7 @@ In this lab, you'll implement asynchronous loop without any extra libraries to m
 
 1. Create/open `fetch.js`
 1. Use `http` to implement request function 
-1. Find the image URL from the content attribute of meta with property `og: image`. 
+1. Find the image URL from the content attribute of meta with property `og: image`. You can search for a string between `<meta property="og:image" content="` and `?`. That's the image URL we need.
 1. Use a callback to pass the end results of the URLs of Instagram images as an array.
 1. Export the function if this script is imported or invoke the function if it runs in standalone mode (look in extra info).
 1. For standalone mode print all URL of images (not posts) in the original order.
