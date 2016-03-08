@@ -9,7 +9,7 @@
 
 ## Introduction
 
-You are hired to create a website that sells stock images for designers, but for this website to have inventory, you need to implement a scrapper which fetches images from internet. Instagram is one of the source for images. As the test, you'll need to fetch images from some IG accounts (links provided) and save them on the disk.
+You are hired to create a website that sells stock images for designers. In order for this website to have inventory, you need to implement a scraper which fetches images from Instagram. You'll need to fetch images from some IG accounts (links provided) and save them on the disk.
 
 In this lab, you'll implement asynchronous loop without any extra libraries to manage asynchronous code. You goal is to create a fast implementation so the requests must be fired as soon as possible, not in sequential order.
 
